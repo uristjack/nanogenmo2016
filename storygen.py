@@ -28,14 +28,14 @@ extort = ["CharacterBrutallyExtorted", "SecretAppropriatedByExtortion", "*", "*"
 confidenceabuse = ["CharacterConfidenceAbused", "SecretAppropriatedByAbuse", "*", "*"]
 
 # The Sexual Appropriation actions
-seduce = ["*", "CharacterSeduced", "*", "SexAppropriated"]
+seduce = ["*", "CharacterSeduced", "SexAppropriated", "*"]
 buyfavour = ["*", "SexualFavourBought", "*"]
-rape = ["*", "CharacterRaped"]
+rape = ["*", "CharacterRaped", "*"]
 
 # Murder!
 strangle = ["CharacterStrangled", "CharacterDiesToStrangle", "*"]
 stab = ["CharacterStabbed", "CharacterDiesToStab", "*"]
-inducesuicide = ["CharacterInducedToSuicide", "*", "CharacterConsidersSuicide", "*", "CharacterCommitsSuicide"]
+inducesuicide = ["CharacterInducedToSuicide", "CharacterConsidersSuicide", "CharacterCommitsSuicide", "*", "*"]
 
 # Possession is 0.9 of the law
 mug = ["*","CharacterMuggedWithRevolver", "MoneyAppropriatedByRevolver", "*"]
@@ -82,7 +82,7 @@ def plotgen(x):
         storytree = list(flatten(storytree))
     RemoveAsterisks(storytree)
     RemoveAsterisks(storytree)
-    print(storytree)
-
+"""
 if __name__ == "__main__":
     plotgen(10)
+"""
