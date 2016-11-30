@@ -168,63 +168,118 @@ def sentencegen(x):
             doc.append('So long, folks!') # Looney Tunes reference here
 
         if item == "NEW_PARAGRAPH_THREATENED":
-            with doc.create(Subsection("A Timeline In Which John Threatens Jane With A Revolver")):
+            threatenlist = ["Threatens", "Menaces", "Intimidates", "Browbeats",
+                            "Bullies", "Pressures", "Pressurizes", "Terrorizes",
+                            "Frightens", "Scares", "Alarms", "Threatens To Harm",
+                            "Issues Threats To", "Makes Threats Against"]
+            threaten = str(random.choice(threatenlist))
+            with doc.create(Subsection("A Timeline In Which John " + threaten + " Jane With A Revolver")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_BLACKMAIL":
-            with doc.create(Subsection("A Timeline In Which John Blackmails Jane")):
+            blackmaillist = ["Blackmails", "Extorts Money From", "Intimidates",
+                             "Milks", "Bleeds", "Wrings", "Demands Hush Money From"]
+            blackmail = str(random.choice(blackmaillist))
+            with doc.create(Subsection("A Timeline In Which John " + blackmail + " Jane")):
                 doc.append('')
                  
         if item == "NEW_PARAGRAPH_DRUGGED":
-            with doc.create(Subsection("A Timeline In Which John Drugs Jane")):
+            druglist = ["Drugs", "Narcotizes", "Knocks Out", "Renders Insensible",
+                        "Laces A Drink For", "Spikes A Drink For"]
+            drug = str(random.choice(druglist))
+            with doc.create(Subsection("A Timeline In Which John " + drug + " Jane")):
                 doc.append('')
                  
         if item == "NEW_PARAGRAPH_SPIEDUPON":
-            with doc.create(Subsection("A Timeline In Which John Spies Upon Jane")):
+            spylist = ["Spies Upon", "Surveils",
+                       "Engages In Espionage Upon",
+                       "Stalks", "Watches", "Keeps An Eye On",
+                       "Engages In Reconnaisance About",
+                       "Reconnoitres"]
+            spy = str(random.choice(spylist))
+            with doc.create(Subsection("A Timeline In Which John " + spy + " Jane")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_EXTORTED":
-            with doc.create(Subsection("A Timeline In Which John Tortures Jane")):
+            alist = ["Tortures", "Torments", "Maltreats", "Persecutes",
+                     "Scourges", "Agonizes", "Distresses", "Harrows"]
+            torture = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + torture + " Jane")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_ABUSED":
-            with doc.create(Subsection("A Timeline In Which John Researchs Jane Using The Intertubes")):
+            alist = ["Researchs", "Investigates", "Analyzes",
+                     "Makes Enquiries About", "Stalks",
+                     "Studies"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + a + " Jane Using The Internet")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_SEDUCED":
-            with doc.create(Subsection("A Timeline In Which John Seduces Jane")):
+            alist = ["Seduces", "Allures", "Lures", "Tempts",
+                     "Entices", "Beguiles", "Cajoles", "Wheedles",
+                     "Ensnares", "Charms", "Captivates", "Enchants",
+                     "Hypnotizes", "Mesmerizes", "Tantalizes",
+                     "Titillates", "Bewitches"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + a + " Jane")):
                 doc.append('')
     
         if item == "NEW_PARAGRAPH_PROSTITUTION":
-            with doc.create(Subsection("A Timeline In Which John Buys 'Favours' From Jane")):
+            alist = ["Call Girl", "Courtesan",
+                     "Demimondaine", "Escort",
+                     "Lady Of The Night", "'Companion'"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which Jane Is A " + a + ", And John Is Her Customer")):
                 doc.append('')
                             
         if item == "NEW_PARAGRAPH_RAPE":
-            with doc.create(Subsection("A Timeline In Which John Has His Way With Jane")):
+            alist = ["Has His Way With", "Violates",
+                     "Pillages", "Plunders", "Spoils",
+                     "Abuses", "Maltreats", "Defiles",
+                     "Adulterates", "Befouls", "Besmirches",
+                     "Debases", "Stains", "Ravishes", "Debauches",
+                     "Pollutes", "Vitiates", "Sullies"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + a + " Jane")):
                 doc.append('')
                             
         if item == "NEW_PARAGRAPH_STRANGLED":
-            with doc.create(Subsection("A Timeline In Which John Strangles Jane")):
+            alist = ["Strangles", "Chokes", "Suffocates", "Strangulates", "Garrottes"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + a + " Jane")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_STABBED":
-            with doc.create(Subsection("A Timeline In Which John Stabs Jane")):
+            alist = ["Stabs", "Gores", "Jabs", "Pierces", "Punctures", "Kills"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + a + " Jane With A Blade")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_SUICIDE":
-            with doc.create(Subsection("A Timeline In Which John Persuades Jane To Commit Suicide")):
+            alist = ["Commit Suicide", "Commit Seppuku", "Kill Herself", "Off Herself"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John Persuades Jane To " + a)):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_MUGGED":
-            with doc.create(Subsection("A Timeline In Which John Mugs Jane")):
+            alist = ["Mugs", "Robs", "Steals From"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + a + " Jane")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_SCAM":
-            with doc.create(Subsection("A Timeline In Which John Scams Jane")):
+            alist = ["Scams", "Bilks", "Cheats", "Swindles", "Defrauds", "Fleeces",
+                     "Dupes", "Exploits", "Rips Off"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John " + a + " Jane")):
                 doc.append('')
                 
         if item == "NEW_PARAGRAPH_COUNTERFEIT":
-            with doc.create(Subsection("A Timeline In Which John Sells Counterfeits To Jane")):
+            alist = ["Counterfeit", "Fake", "Forged", "Sham", "Ersatz",
+                     "Imitation", "Dummy", "Knock-off", "Pirated", "Phony"]
+            a = str(random.choice(alist))
+            with doc.create(Subsection("A Timeline In Which John Sells " + a + "Goods To Jane")):
                 doc.append('')
 
         if item == "APullsOutGun":
@@ -1063,6 +1118,6 @@ def sentencegen(x):
             doc.append("Jane " + buy + " the item, and navigates around the black market until she finds the exit, leaving.")
 
         
-    doc.generate_tex(filepath="Crime Write")  
+    doc.generate_tex(filepath="Crime Write by Uristjack")  
 
 
