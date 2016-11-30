@@ -14,8 +14,8 @@ This was my original structure set up:
 This is my current structural set up:
 - Plot of crimes generated [DONE!]
 - Event template (AKA plot) turned into paragraph templates [DONE!]
-- Paragraph templates turned into sentence templates
-- Sentence templates cause generation of actual sentences, in LaTeX output
-- Turn LaTeX output into PDF
+- Paragraph templates turned into sentence templates [DONE!]
+- Sentence templates cause generation of actual sentences, in LaTeX output [DONE!]
+- Turn LaTeX output into PDF [DONE!]
 
 Since this _is_ a multiversal crime timeline narrator, I may also end up writing some code to generate some ad-hoc scientific explanation for how we can see these timelines. I find this good for two reasons - one, it's amusing to have a computer breaking the fourth wall, and two, it'll be a nice change from coding the generators of scenes of Tarantino-esque blood, gore, and violence.
