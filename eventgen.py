@@ -2,10 +2,20 @@ import random
 from compiler.ast import flatten
 import storygen
 
+"""
+This program is part 2 of uristjack's Story Writer for NaNoGenMo, and for my CAS hours.
+This is as per the structure of:
+    https://gist.github.com/cpressey/6324fff6ef0dfdf69b96
+This module treats the story structure as a tree, denoted as a list of lists.
+It then complicates the tree, making the plot more complicated.
+
+Licensed under the GNU General Public License, Version 3 by Julian Ferrone, 2016.
+"""
+
 # Replace events with structures of sentences. These will be turned into sentences in a sentence generator
 # ALLCAPS are for titles, not sentences - they are for LaTeX
 
-introduce = ["INTRO_TITLE", "DescribeDay","DescribeA", "DescribeB", "DescribeMultiverse"] # First character = A, 2nd = B
+introduce = ["INTRO_TITLE", "DescribeA", "DescribeB", "DescribeMultiverse", "DescribeDay"] # First character = A, 2nd = B
 convalesce = ["CONCLUSION_TITLE", "FindOutNextEpisode"]
 
 bobtree = []
@@ -19,13 +29,13 @@ willbyblackmail = ["BAcquiesces"]
 drugged = ["NEW_PARAGRAPH_DRUGGED", "APullsOutDrug", "DescribeDrug", "ADrugsB"]
 willbydrugs = ["DescribeEffectedB"]
 
-spiedupon = ["NEW_PARAGRAPH_SPIEDUPON", "ASpiesOnB", "DescribeSpyingEquipment"]
+spiedupon = ["NEW_PARAGRAPH_SPIEDUPON", "DescribeSpyingEquipment", "ASpiesOnB"]
 secretbyspy = ["DescribeBSecret"] # I want these secrets to be a mish-mash of random stuff, based on your average Tumblrina - pyrogender, triform etc.
 
-extorted = ["NEW_PARAGRAPH_EXTORTED", "ATorturesB", "DescribeTortureEquipment"]
+extorted = ["NEW_PARAGRAPH_EXTORTED", "DescribeTortureEquipment", "ATorturesB"]
 secretbyextortion = ["BConfesses"]
 
-abused = ["NEW_PARAGRAPH_ABUSED", "AResearchsB", "DescribeResearchEquipment"]
+abused = ["NEW_PARAGRAPH_ABUSED", "DescribeResearchEquipment", "AResearchsB"]
 secretbyabuse = ["DescribeBSecret"]
 
 seduced = ["NEW_PARAGRAPH_SEDUCED", "DescribeRomanticEnvironment", "ASeducesB"]
@@ -33,7 +43,7 @@ sexualseduction = ["VaguelySexualAllusions"]
 
 favourbought = ["NEW_PARAGRAPH_PROSTITUTION", "DescribeSeedyBrothel", "DescribeProstituteB", "APaysB", "VaguelySexualAllusions"]
 
-raped = ["NEW_PARAGRAPH_RAPE", "ABreaksIntoBHouse", "AStalksIntoBedroom", "AIncapacitatesB", "VaguelySexualAllusions", "DescribeBImpact"]
+raped = ["NEW_PARAGRAPH_RAPE", "ABreaksIntoBHouse", "AStalksIntoBedroom", "AIncapacitatesB", "VaguelySexualAllusions"]
 
 strangled = ["NEW_PARAGRAPH_STRANGLED", "AOverpowersB", "AStranglesB"]
 deathbystrangle = ["DescribeStrangulation"]
@@ -46,14 +56,14 @@ considersuicide = ["BConsidersSuicide", "BAgreesWithA"]
 deathbysuicide = ["BCommitsSuicide"] # Commits suicide via revolver gunshot.
 
 muggedwithrevolver = ["NEW_PARAGRAPH_MUGGED", "BInAlley", "DescribeSeedyAlley", "AStepsOutOfShadows", "AThreatensWithRevolver"]
-moneybyrevolver = ["BGivesMoney", "BEscapes", "ACountsMugMoney"]
+moneybyrevolver = ["BGivesMoney", "BEscapes", "ACountsMoney"]
 
 scamdescription = ["NEW_PARAGRAPH_SCAM", "DescribeScam"]
 scammed = ["BScammedByA"]
-moneybyscam = ["AReceivesMoneyFromScam", "ACountsScamMoney"] 
+moneybyscam = ["ACountsMoney"] 
 
 counterfeit = ["NEW_PARAGRAPH_COUNTERFEIT", "DescribeBlackMarket", "ASellingCounterfeits", "DescribeCounterfeits"]
-moneybycounterfeit = ["BBuysCounterfeits", "ACountsCounterfeitMoney"]
+moneybycounterfeit = ["BBuysCounterfeits", "ACountsMoney"]
 
 
 
