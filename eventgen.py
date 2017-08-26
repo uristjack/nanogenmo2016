@@ -8,8 +8,6 @@ This is as per the structure of:
     https://gist.github.com/cpressey/6324fff6ef0dfdf69b96
 This module treats the story structure as a tree, denoted as a list of lists.
 It then complicates the tree, making the plot more complicated.
-
-Licensed under the GNU General Public License, Version 3 by Julian Ferrone, 2016.
 """
 
 # Replace events with structures of sentences. These will be turned into sentences in a sentence generator
